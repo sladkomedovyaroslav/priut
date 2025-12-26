@@ -127,11 +127,17 @@ body {
 }
 
 .pet-card {
+  display: block;
   background: white;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   font-size: 20px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
 }
 
 /* ================= FAQ ================= */
