@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Приют «Добрые лапы»</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,10 +15,14 @@
     <source src="video.mp4" type="video/mp4">
   </video>
 
+  <!-- Бургер -->
   <div class="burger" id="burger">
-    <span></span><span></span><span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 
+  <!-- Мобильное меню -->
   <nav class="mobile-menu" id="mobileMenu">
     <a href="#">Главная</a>
     <a href="#">Подопечные</a>
@@ -32,6 +37,7 @@
   </div>
 </header>
 
+<!-- ПОДОПЕЧНЫЕ -->
 <section class="pets">
   <h2>Наши подопечные</h2>
   <div class="pet-list">
@@ -41,14 +47,67 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq">
+  <h2>Часто задаваемые вопросы</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">Как взять животное из приюта?</button>
+    <div class="faq-answer">
+      <p>Вы можете оставить заявку через форму на сайте или приехать к нам лично.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Можно ли помочь приюту?</button>
+    <div class="faq-answer">
+      <p>Да, мы принимаем помощь кормами, медикаментами и пожертвования.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Отдаёте ли вы животных бесплатно?</button>
+    <div class="faq-answer">
+      <p>Да, все животные передаются бесплатно по договору ответственного содержания.</p>
+    </div>
+  </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<footer class="contacts">
+  <h2>Контактная информация</h2>
+
+  <div class="contacts-grid">
+    <div>
+      <strong>Адрес:</strong>
+      <p>г. Москва, ул. Добрая, д. 12</p>
+    </div>
+    <div>
+      <strong>Телефон:</strong>
+      <p>+7 (999) 123-45-67</p>
+    </div>
+    <div>
+      <strong>Email:</strong>
+      <p>dobryelapy@mail.ru</p>
+    </div>
+    <div>
+      <strong>Режим работы:</strong>
+      <p>Ежедневно с 10:00 до 19:00</p>
+    </div>
+  </div>
+</footer>
+
+<!-- МОДАЛЬНОЕ ОКНО -->
 <div class="modal" id="modal">
   <div class="modal-content">
     <h2>Связаться с приютом</h2>
+
     <form id="contactForm">
-      <input type="text" id="name" placeholder="Ваше имя" required>
-      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="email" name="email" placeholder="Email" required>
       <button type="submit">Отправить</button>
     </form>
+
     <p class="error" id="error"></p>
     <button class="close" id="closeForm">Закрыть</button>
   </div>
