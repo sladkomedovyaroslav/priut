@@ -114,14 +114,17 @@ body {
 .faq {
   padding: 60px 20px;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .faq-item {
   background: white;
   border-radius: 15px;
   padding: 20px;
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
+  text-align: left;
+  max-width: 700px;
 }
 
 .faq-question {
@@ -131,17 +134,19 @@ body {
   font-weight: 600;
   cursor: pointer;
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 
 .faq-answer {
   display: none;
   margin-top: 10px;
+  text-align: center;
 }
 
 .faq-item.open .faq-answer {
   display: block;
 }
+
 
 /* CONTACTS */
 .contacts {
