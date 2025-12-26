@@ -1,3 +1,8 @@
+:root {
+  --main-color: #FF9800;
+  --main-color-hover: #FB8C00;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +14,7 @@ body {
   color: #333;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 .header {
   position: relative;
   height: 100vh;
@@ -33,18 +38,30 @@ body {
 
 .header-content h1 {
   font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.header-content p {
+  font-size: 20px;
+  margin-bottom: 25px;
 }
 
 .header-content button {
-  background: #FF9800;
+  background: var(--main-color);
   border: none;
   padding: 15px 30px;
   font-size: 18px;
   border-radius: 30px;
   cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
 }
 
-/* BURGER */
+.header-content button:hover {
+  background: var(--main-color-hover);
+  transform: scale(1.05);
+}
+
+/* ================= BURGER ================= */
 .burger {
   position: fixed;
   top: 20px;
@@ -64,14 +81,14 @@ body {
   border-radius: 2px;
 }
 
-/* MOBILE MENU */
+/* ================= MOBILE MENU ================= */
 .mobile-menu {
   position: fixed;
   top: 0;
   right: -100%;
   width: 70%;
   height: 100%;
-  background: #4CAF50;
+  background: var(--main-color);
   padding: 80px 30px;
   display: flex;
   flex-direction: column;
@@ -91,16 +108,22 @@ body {
   right: 0;
 }
 
-/* PETS */
+/* ================= PETS ================= */
 .pets {
   padding: 60px 20px;
   text-align: center;
 }
 
+.pets h2 {
+  margin-bottom: 30px;
+}
+
 .pet-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .pet-card {
@@ -108,9 +131,10 @@ body {
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-size: 20px;
 }
 
-/* FAQ */
+/* ================= FAQ ================= */
 .faq {
   padding: 60px 20px;
   max-width: 900px;
@@ -118,13 +142,18 @@ body {
   text-align: center;
 }
 
+.faq h2 {
+  margin-bottom: 30px;
+}
+
 .faq-item {
   background: white;
   border-radius: 15px;
   padding: 20px;
   margin: 0 auto 15px;
-  text-align: left;
   max-width: 700px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .faq-question {
@@ -140,17 +169,16 @@ body {
 .faq-answer {
   display: none;
   margin-top: 10px;
-  text-align: center;
+  font-size: 16px;
 }
 
 .faq-item.open .faq-answer {
   display: block;
 }
 
-
-/* CONTACTS */
+/* ================= CONTACTS ================= */
 .contacts {
-  background: #4CAF50;
+  background: var(--main-color);
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -177,7 +205,7 @@ body {
   margin: 5px 0 0;
 }
 
-/* MODAL */
+/* ================= MODAL ================= */
 .modal {
   position: fixed;
   inset: 0;
@@ -197,6 +225,10 @@ body {
   text-align: center;
 }
 
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
 .modal input {
   width: 100%;
   padding: 10px;
@@ -204,20 +236,26 @@ body {
 }
 
 .modal button {
-  background: #4CAF50;
+  background: var(--main-color);
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.modal button:hover {
+  background: var(--main-color-hover);
 }
 
 .close {
-  background: #ccc;
-  color: #000;
+  background: #ccc !important;
+  color: #000 !important;
   margin-top: 10px;
 }
 
-/* ADAPTIVE */
+/* ================= ADAPTIVE ================= */
 @media (max-width: 768px) {
   .burger {
     display: flex;
@@ -225,5 +263,9 @@ body {
 
   .header-content h1 {
     font-size: 32px;
+  }
+
+  .header-content p {
+    font-size: 16px;
   }
 }
