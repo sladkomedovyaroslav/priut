@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Приют «Добрые лапы»</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <video autoplay muted loop class="video-bg">
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <div class="burger" id="burger">
+    <span></span><span></span><span></span>
+  </div>
+
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#">Главная</a>
+    <a href="#">Подопечные</a>
+    <a href="#">Как помочь</a>
+    <a href="#">Контакты</a>
+  </nav>
+
+  <div class="header-content">
+    <h1>Подари дом другу 🐾</h1>
+    <p>Приют «Добрые лапы» помогает животным найти семью</p>
+    <button id="openForm">Хочу помочь</button>
+  </div>
+</header>
+
+<section class="pets">
+  <h2>Наши подопечные</h2>
+  <div class="pet-list">
+    <div class="pet-card">🐶 Бобик</div>
+    <div class="pet-card">🐱 Мурка</div>
+    <div class="pet-card">🐕 Рекс</div>
+  </div>
+</section>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2>Связаться с приютом</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Ваше имя" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <button type="submit">Отправить</button>
+    </form>
+    <p class="error" id="error"></p>
+    <button class="close" id="closeForm">Закрыть</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

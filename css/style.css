@@ -1,0 +1,25 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:'Montserrat',sans-serif;background:#F9F9F9;color:#333}
+.header{position:relative;height:100vh;overflow:hidden}
+.video-bg{position:absolute;width:100%;height:100%;object-fit:cover}
+.header-content{position:relative;z-index:2;color:#fff;text-align:center;padding-top:30vh}
+.header-content h1{font-size:48px}
+.header-content button{background:#FF9800;border:none;padding:15px 30px;font-size:18px;border-radius:30px;cursor:pointer}
+.pets{padding:60px 20px;text-align:center}
+.pet-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.pet-card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.burger{position:fixed;top:20px;right:20px;width:30px;height:22px;display:none;flex-direction:column;justify-content:space-between;cursor:pointer;z-index:1001}
+.burger span{height:4px;background:white;border-radius:2px}
+.mobile-menu{position:fixed;top:0;right:-100%;width:70%;height:100%;background:#4CAF50;display:flex;flex-direction:column;padding:80px 30px;transition:right .4s;z-index:1000}
+.mobile-menu a{color:white;text-decoration:none;font-size:20px;margin-bottom:20px;font-weight:600}
+.mobile-menu.open{right:0}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;opacity:0}
+.modal-content{background:white;padding:30px;border-radius:20px;width:300px;text-align:center}
+.modal input{width:100%;padding:10px;margin-bottom:10px}
+.modal button{background:#4CAF50;color:white;border:none;padding:10px 20px;border-radius:20px;cursor:pointer}
+.close{background:#ccc;color:#000;margin-top:10px}
+.error{color:red}
+@media(max-width:768px){
+  .burger{display:flex}
+  .header-content h1{font-size:32px}
+}
